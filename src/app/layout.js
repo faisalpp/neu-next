@@ -21,12 +21,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Provider store={store} >
-          <PersistGate loading={null} persistor={persistor} >
-            <Navbar />
-            <ScrollToTop />
+          {/* <PersistGate loading={null} persistor={persistor} > */}
+            {/* <Navbar /> */}
+            {/* <ScrollToTop /> */}
             {children}
-            <Footer />
-          </PersistGate>
+            {/* <Footer /> */}
+          {/* </PersistGate> */}
         </Provider>
       </body>
     </html>

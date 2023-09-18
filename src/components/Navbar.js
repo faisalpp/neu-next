@@ -6,7 +6,7 @@ import MobNavbar from '@/components/MobComp/Navbar'
 import SideCart from '@/components/SideCart'
 
 const Navbar = () => {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 992);
+  const [isDesktop, setIsDesktop] = useState();
   // Mobile and Desktop Design
   useEffect(() => {
     const handleResize = () => {
@@ -21,8 +21,8 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      {isDesktop ? <DeskNavbar /> : <MobNavbar />}
-      <SideCart />
+      {/* {isDesktop ? <DeskNavbar /> : <MobNavbar />} */}
+      {/* <SideCart /> */}
     </>
   )
 }

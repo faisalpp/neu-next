@@ -24,7 +24,7 @@ const Footer = () => {
             <h4 className='w-max text-white text-lg font-bold font-reg' >Our Companies</h4>
             <div className='flex flex-col space-y-2' >
               <Link to="/">
-                <Image className='w-32 h-12' src="/neu.webp" alt="logo2" />
+                <Image className='w-32 h-12' width={10} height={10} src="/neu.webp" alt="logo2" />
               </Link>
               <p className='text-xs text-white/60 font-normal' >Shop Austin's #1 Local Discount Appliance Outlet</p>
             </div>

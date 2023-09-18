@@ -1,7 +1,6 @@
 import axios from 'axios'
 
-const isDev = import.meta.env.VITE_APP_DEV === "dev";
-const baseUrl = isDev ? import.meta.env.VITE_APP_INTERNAL_PATH : "";
+const baseUrl = process.env.VITE_APP_INTERNAL_PATH;
 
 const api = axios.create({
     baseURL: baseUrl,
@@ -22,7 +21,7 @@ export const saveOrderAddress = async (data) => {
     return response;
 }
 
-const refreshUrl = isDev ? `${import.meta.env.VITE_APP_INTERNAL_PATH}/api/user/refresh` : "/api/user/refresh";
+const refreshUrl = `${process.env.VITE_APP_INTERNAL_PATH}/api/user/refresh`;
 
 api.interceptors.response.use(
     (config) => config,
