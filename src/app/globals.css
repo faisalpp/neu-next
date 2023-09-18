@@ -2,26 +2,280 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .xy-center {
+    @apply flex justify-center items-center;
+  }
+  .top__menu_button {
+    @apply flex items-center px-4 bg-b2 py-[10px] w-max cursor-pointer rounded-md text-white;
+  }
+  .top__menu_item {
+    @apply flex w-full px-2 first:mt-0 mt-1 cursor-pointer text-xs py-2 rounded-md hover:bg-b5 font-normal;
+  }
+  .nav____item {
+    @apply flex items-center font-normal text-white/80 text-xs cursor-pointer hover:text-b6;
+  }
+  .small___nav__item {
+    @apply flex items-center bg-b2 rounded-md py-2 px-3 text-white;
+  }
+  .small___nav__subitem {
+    @apply border-l-2 border-white rounded-lg px-5 bg-b2 py-2 text-white;
   }
 }
 
+.maincontainer {
+  @apply 3xl:max-w-1680px w-[90%] 2xl:w-[85%] mx-auto;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Montserrat", sans-serif;
+}
+
+#tour {
+  background-image: url("/public/map.webp");
+  backdrop-filter: blur(2.6px);
+  -webkit-backdrop-filter: blur(2.6px);
+}
+
+/* #news {
+  background-image: url('../public/new.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+/* How It Work Slider */
+.howitworkslider {
+  @apply pb-5 xl:pb-0 [&>div>div]:xl:before:hidden [&>div>div>div>div]:xl:h-full [&>div>div>div]:xl:!w-full [&>div>div]:xl:!grid [&>div>div]:xl:!grid-cols-3 [&>div>div]:gap-7 [&>div>div]:2xl:gap-10 [&>div>div]:3xl:gap-x-[60px];
+}
+
+/* ========== */
+
+#news-grid {
+  @apply lg:grid grid-cols-12 flex flex-col justify-center items-center py-5 bg-b4 w-full lg:h-72 xl:h-96 md:h-80 rounded-lg maxmd:px-5;
+  background-image: url("/public/grid.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#map {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.6px);
+  -webkit-backdrop-filter: blur(2.6px);
+  border: 1px solid rgba(255, 255, 255, 0.21);
+}
+
+#product_viewer {
+  max-width: 50%;
+  margin: 200px auto;
+}
+
+#product_viewer img {
+  display: block;
+  width: 100%;
+}
+
+.parent-container > div > div > div {
+  /* Set opacity to 1 for child <div> elements */
+  opacity: 1 !important;
+  height: 250px !important;
+  /* background-color: red; */
+}
+
+.ratingproductslider .slideInner___2mfX9 {
+  padding-right: 10px;
+}
+
+/* Review Slider */
+.reviewslider-wrapper .slick-dots {
+  bottom: -50px;
+}
+
+.reviewslider-wrapper .slick-dots li {
+  margin: 0;
+}
+
+.reviewslider-wrapper .slick-dots li button:before {
+  font-size: 8px;
+  color: #071822;
+}
+
+.reviewslider-wrapper .slick-dots li:hover button:before {
+  color: #22a6ab;
+}
+
+.reviewslider-wrapper .slick-dots li.slick-active button:before {
+  color: #22a6ab;
+}
+
+.text-line-camp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.rdp {
+  margin: 0 !important;
+}
+
+.rdp-month.rdp-caption_start.rdp-caption_end {
+  background-color: #e8f5f5;
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.rdp .rdp-table .rdp-cell .rdp-button_reset.rdp-button.rdp-day {
+  font-size: 16px;
+  color: #212121;
+}
+
+.rdp .rdp-table {
+  max-width: 100% !important;
+  width: 100%;
+}
+
+.rdp
+  .rdp-table
+  .rdp-cell
+  .rdp-button_reset.rdp-button.rdp-day.rdp-day_selected {
+  color: white;
+  background-color: #22a6ab;
+  font-weight: 400;
+  width: 32px;
+  height: 32px;
+}
+
+/* Pagination */
+
+.pagination-container {
+  @apply flex gap-6 items-center justify-center;
+}
+
+.pagination-container .pagination-item {
+  @apply text-b25 text-sm;
+}
+
+.pagination-container .pagination-item.selected {
+  @apply text-b3 font-bold;
+}
+
+.pagination-container .pagination-item.disabled {
+  pointer-events: none;
+}
+
+.content {
+  /* Your existing styles for content */
+  transition: opacity 0.2s ease-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.text_between_line {
+  font-size: 14px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.text_between_line:before,
+.text_between_line:after {
+  background-color: #d9d9d9;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.text_between_line:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.text_between_line:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+/* Modal */
+.backdrop-blur-sm {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: initial;
+}
+
+/* === */
+/* checklsit Scroll Bar */
+#checklists::-webkit-scrollbar-track {
+  border-radius: 16px;
+  background-color: white;
+}
+
+#checklists::-webkit-scrollbar {
+  width: 16px;
+  background-color: white;
+}
+
+#checklists::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  background-color: #d9d9d9;
+}
+
+/* Our story */
+.meetteam {
+  @apply [&>figure:first-child]:maxmd:col-span-2 [&>figure:first-child]:maxmd:mx-auto [&>figure:first-child]:maxmd:w-[200px] [&>figure:first-child>img]:w-40 [&>figure:first-child>img]:h-40;
+}
+
+.meetteam figure:first-child h3 {
+  @apply text-lg;
+}
+
+.meetteam figure:first-child span {
+  @apply text-sm;
+}
+/* Shop Austin */
+
+.shopaustin {
+  @apply py-10 lg:py-16 xl:py-20 2xl:py-120px mx-auto grid grid-cols-1 lg:grid-cols-2 3xl:grid-cols-[1fr_686px] items-center gap-8 lg:gap-28  2xl:gap-[157px];
+}
+
+.shopaustin h2 {
+  @apply maxmd:text-center font-extrabold text-3xl xl:w-[464px] 2xl:w-full xl:text-[46px] xl:leading-[3rem] 2xl:text-[56px] 2xl:leading-[64px] text-white;
+}
+.shopaustin p {
+  @apply maxmd:text-center mt-6 mb-10 text-white text-base xl:text-[20px] 2xl:text-2xl leading-6 xl:leading-8;
+}
+
+/* ========= */
+h1.ce-header {
+  @apply text-3xl font-bold;
+}
+
+h2.ce-header {
+  @apply text-2xl font-semibold;
+}
+
+h3.ce-header {
+  @apply text-xl font-semibold;
+}
+
+h4.ce-header {
+  @apply text-lg font-semibold;
+}
+
+h5.ce-header {
+  @apply text-base font-semibold;
+}
+
+h6.ce-header {
+  @apply text-base font-semibold;
 }
