@@ -1,7 +1,6 @@
 import axios from 'axios'
 
-const isDev = import.meta.env.VITE_APP_DEV === "dev";
-const baseUrl = isDev ? import.meta.env.VITE_APP_INTERNAL_PATH : "";
+const baseUrl = process.env.VITE_APP_INTERNAL_PATH;
 
 const AdminApi = axios.create({
     baseURL: baseUrl,
@@ -198,6 +197,16 @@ export const getCategoryData = async (data) => {
     }
     return response;
 }
+export const getModelNos = async (data) => {
+    let response;
+    
+    try{
+        response = await AdminApi.post('/api/admin/get-model-nos',data);
+    }catch (error){
+        return error;
+    }
+    return response;
+}
 export const createFaqTab = async (data) => {
     let response;
     
@@ -269,27 +278,17 @@ export const deleteFaq = async (data) => {
     return response;
 }
 
-export const uploadImage = async (data) => {
+export const uploadMedia = async (data) => {
     let response;
     
     try{
-        response = await AdminMultiApi.post('/api/admin/image-upload',data,{validateStatus: () => true});
+        response = await AdminMultiApi.post('/api/admin/upload-media',data,{validateStatus: () => true});
     }catch (error){
         return error;
     }
     return response;
 }
 
-export const getMedia = async (data) => {
-    let response;
-    
-    try{
-        response = await AdminApi.post('/api/admin/get-uploaded-media',data,{validateStatus: () => true});
-    }catch (error){
-        return error;
-    }
-    return response;
-}
 export const deleteMedia = async (data) => {
     let response;
     
@@ -404,7 +403,7 @@ export const updateMemberIndex = async (data) => {
 }
 
 
-const refreshUrl = isDev ? `${import.meta.env.VITE_APP_INTERNAL_PATH}/api/admin/refresh` : "/api/admin/refresh";
+const refreshUrl = `${process.env.VITE_APP_INTERNAL_PATH}/api/admin/refresh`;
 
 AdminApi.interceptors.response.use(
     (config) => config,

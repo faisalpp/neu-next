@@ -8,11 +8,10 @@ import SideCartCard from './Cart/SideCartCard'
 import { useSelector } from 'react-redux';
 import { GoDotFill } from 'react-icons/go'
 import SelectTimeSlot from './Cart/SelectTimeSlot'
-import { getCart, removeFromCart, updateCartData } from '../api/cart'
-import { resetUser } from "../store/userSlice";
-import { showSCart, hideSCart } from "../store/cartSlice";
+import { getCart, removeFromCart, updateCartData } from '@/api/cart'
+import { resetUser } from "@/store/userSlice";
+import { showSCart, hideSCart } from "@/store/cartSlice";
 import { useDispatch } from "react-redux";
-// import { useNavigate } from 'react-router-dom'
 import { usePathname } from 'next/navigation'
 import { toast } from 'react-toastify'
 import { BsCart3 } from 'react-icons/bs'
@@ -230,7 +229,7 @@ const SideCart = () => {
           <div className='flex items-center sticky top-0 bg-white maxlg:rounded-t-2xl py-5 px-6 justify-between' ><div className='flex items-center gap-x-3' ><h4>My Cart</h4>{pickupOrders.length === 0 && deliveryOrders.length === 0 ? null : <span className='bg-b3 text-white rounded-full text-xs w-5 h-5 xy-center' >{cartCount}</span>}</div></div>
           {loading ? <div className='xy-center h-full w-full' ><Image width={200} height={200} src="/loader-bg.gif" quality={1} alt='loader' className='w-10 h-10 ml-2' /></div> : pickupOrders.length === 0 && deliveryOrders.length === 0 ?
             <div className='flex flex-col px-2 space-y-5 w-full justify-center items-center h-full' >
-              {/* <Image width={200} height={200} src="/bag.webp" quality={1} alt='bag' /> */}
+              <Image src="/bag.webp" width={10} height={10} quality={1} alt='bag' />
               <h1 className='font-extrabold' >Your Cart is Empty</h1>
               <h2 className='text-center' >Lorem Ipsum Doller Sit Amet, Consecture Audipicsing Elit</h2>
               <button type='button' className='xy-center rounded-lg bg-b3 py-3 text-white font-medium w-1/2 text-sm'><BsCart3 className='mr-2' /> Start Shopping</button>

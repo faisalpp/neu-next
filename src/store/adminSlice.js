@@ -1,5 +1,6 @@
+'use client';
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
-import {Signin} from "../api/admin/auth"
+import {Signin} from "@/api/admin/auth"
 
 const initialState = {
   _id: "",

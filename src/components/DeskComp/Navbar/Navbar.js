@@ -8,7 +8,6 @@ import { RiArrowDropDownLine } from 'react-icons/ri';
 import { FiPhone } from 'react-icons/fi';
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
 import NavDropDown from '@/components/DeskComp/Navbar/NavDropDown';
-// import { Link, Link, useNavigate } from 'react-router-dom';
 import { usePathname } from 'next/navigation'
 import Link from 'next/link';
 import Image from 'next/image';
@@ -16,12 +15,12 @@ import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux'
-import { resetUser } from '../../../store/userSlice'
+import { resetUser } from '@/store/userSlice'
 import { Menu } from '@headlessui/react'
-import { AdminSignout } from '../../../api/admin/auth';
-import { Signout } from '../../../api/user/auth';
-import { showSCart, hideSCart } from '../../../store/cartSlice'
-import { getNabarAppliances, searchAppliance } from '../../../api/frontEnd'
+import { AdminSignout } from '@/api/admin/auth';
+import { Signout } from '@/api/user/auth';
+import { showSCart, hideSCart } from '@/store/cartSlice'
+import { getNabarAppliances, searchAppliance } from '@/api/frontEnd'
 
 const Navbar = () => {
   const [megMenu, setMegMenu] = useState(false);
@@ -158,7 +157,7 @@ const Navbar = () => {
         {/* Navbar Start */}
         <div className='lg:grid grid-cols-12 py-5 items-center maincontainer'>
           <Link href="/">
-            <Image width={200} height={200} className='col-start-1 col-end-3' quality={1} src="/neu.webp" alt="logo" />
+            <Image className='col-start-1 col-end-3' quality={1} src="/neu.webp" width={10} height={10} alt="logo" />
           </Link>
           {/* Search Start */}
           <div className='col-start-4 col-end-8 flex items-center bg-white h-10 px-2 rounded-lg space-x-2 w-full ' >

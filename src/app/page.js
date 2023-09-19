@@ -51,7 +51,7 @@ export default function Home() {
 
       <SatisfiedSection apiSectionName="home-page-footer-review" title="Join Thousands of our Satisfied Customers." />
 
-      <NewsLetterSection backimage="/new.webp" />
+      <NewsLetterSection backimage="new.webp" />
     </>
   )
 }
