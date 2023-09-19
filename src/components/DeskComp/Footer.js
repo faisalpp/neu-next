@@ -23,17 +23,17 @@ const Footer = () => {
           <div className='flex flex-col gap-y-10  text-white' >
             <h4 className='w-max text-white text-lg font-bold font-reg' >Our Companies</h4>
             <div className='flex flex-col space-y-2' >
-              <Link to="/">
-                <Image className='w-32 h-12' src="/neu.webp" alt="logo2" />
+              <Link href="/">
+                <Image width={200} height={200} className='w-32 h-12' src="/neu.webp" alt="logo2" />
               </Link>
-              <p className='text-xs text-white/60 font-normal' >Shop Austin's #1 Local Discount Appliance Outlet</p>
+              <p className='text-xs text-white/60 font-normal' >Shop Austin&apos;s #1 Local Discount Appliance Outlet</p>
             </div>
           </div>
 
           {/* Nav Logo 2 */}
           <div className='flex flex-col gap-y-2 text-white' >
             <a href="https://neuapplianceparts.com/" target='_new'>
-              <Image className='w-32 h-12' src="/neu2.webp" alt="logo2" />
+              <Image width={200} height={200} className='w-32 h-12' src="/neu2.webp" alt="logo2" />
             </a>
             <p className='text-xs text-white/60 font-normal' >Shop Discount Appliance Repair Parts</p>
           </div>
@@ -41,9 +41,9 @@ const Footer = () => {
           {/* Nav Logo 3 */}
           <div className='flex flex-col gap-y-3 text-white' >
             <a href="https://neuappliancewholesale.com/" target='_new'>
-              <Image className='w-32 h-12' src="/neu3.webp" alt="logo3" />
+              <Image width={200} height={200} className='w-32 h-12' src="/neu3.webp" alt="logo3" />
             </a>
-            <p className='text-xs text-white/60 font-normal' >Wholesale Supply Distributor of Bulk Scratch and Dent Appliances to Appliance Vendor's across the Country</p>
+            <p className='text-xs text-white/60 font-normal' >Wholesale Supply Distributor of Bulk Scratch and Dent Appliances to Appliance Vendor&apos;s across the Country</p>
           </div>
 
         </div>
@@ -53,32 +53,32 @@ const Footer = () => {
         <div className='order-2 sm:order-none sm:col-span-6 lg:col-span-3' >
           <h4 className='w-max text-white text-lg font-bold font-reg' >Quick Links</h4>
           <div className='flex flex-col text-white/60 text-base font-normal gap-y-5 mt-10 hover:[&>a]:underline hover:[&>a]:cursor-pointer' >
-            <Link to=''>Shop Now</Link>
-            <Link to=''>Shop On Sale</Link>
-            <Link to='/how-it-works/what-we-sell'>Live Inventory</Link>
-            <Link to=''>Virtual Showroom</Link>
-            <Link to='/financing'>Financing</Link>
-            <Link to=''>Discount Appliances in Stock</Link>
-            <Link to=''>Austin Appliance Liquidation</Link>
-            <Link to=''>Used Appliances</Link>
-            <Link to='/appliance-repair'>Appliance Repair</Link>
-            <Link to='/helpful-appliances-tips'>Helpful Appliance Tips</Link>
+            <Link href=''>Shop Now</Link>
+            <Link href=''>Shop On Sale</Link>
+            <Link href='/how-it-works/what-we-sell'>Live Inventory</Link>
+            <Link href=''>Virtual Showroom</Link>
+            <Link href='/financing'>Financing</Link>
+            <Link href=''>Discount Appliances in Stock</Link>
+            <Link href=''>Austin Appliance Liquidation</Link>
+            <Link href=''>Used Appliances</Link>
+            <Link href='/appliance-repair'>Appliance Repair</Link>
+            <Link href='/helpful-appliances-tips'>Helpful Appliance Tips</Link>
           </div>
         </div>
         {/* Quick Links Section End */}
 
         {/* Quick Links Section 2 Start */}
         <div className='order-3 sm:order-none sm:col-span-6 lg:col-span-3 lg:mt-0 flex flex-col text-white/60 text-base font-normal gap-y-5 sm:pt-[65px] hover:[&>a]:underline hover:[&>a]:cursor-pointer' >
-          <Link to=''>Our Brands</Link>
-          <Link to=''>Delivery</Link>
-          <Link to='/measuring-guide'>Appliance Measuring Guide</Link>
-          <Link to='/do-i-have-electric-or-gas'>Do I have Electric or Gas?</Link>
-          <Link to='/appliancetypes'>Our Products</Link>
-          <Link to='/faqs'>FAQ</Link>
-          <Link to=''>Contact</Link>
-          <Link to=''>Terms</Link>
-          <Link to=''>Refunds</Link>
-          <Link to=''>Privacy Policy</Link>
+          <Link href=''>Our Brands</Link>
+          <Link href=''>Delivery</Link>
+          <Link href='/measuring-guide'>Appliance Measuring Guide</Link>
+          <Link href='/do-i-have-electric-or-gas'>Do I have Electric or Gas?</Link>
+          <Link href='/appliancetypes'>Our Products</Link>
+          <Link href='/faqs'>FAQ</Link>
+          <Link href=''>Contact</Link>
+          <Link href=''>Terms</Link>
+          <Link href=''>Refunds</Link>
+          <Link href=''>Privacy Policy</Link>
         </div>
         {/* Quick Links Section 2 End */}
 
@@ -104,7 +104,7 @@ const Footer = () => {
             <div className='flex flex-col gap-y-5' >
               <div className='flex items-center space-x-2' ><span className='flex items-center justify-center w-9 h-9 rounded-full bg-b2' ><FiPhone /></span><span className='text-sm' >(512) 992-2714</span></div>
               <div className='flex items-center space-x-2' ><span className='flex items-center justify-center w-9 h-9 rounded-full bg-b2' ><IoLocationOutline /></span><span className='text-sm' >123 N Loop Blvd E, Austin, TX 78751</span></div>
-              <div className="mapouter"><div className="gmap_canvas"><iframe title="map" className='rounded-xl w-full maxmd:h-[150px]' width="300" height="150" id="gmap_canvas" src="https://maps.google.com/maps?q=Austin&t=&z=10&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe><br /></div></div>
+              <div className="mapouter"><div className="gmap_canvas"><iframe title="map" className='rounded-xl w-full maxmd:h-[150px]' width="300" height="150" id="gmap_canvas" src="https://maps.google.com/maps?q=Austin&t=&z=10&ie=UTF8&iwloc=&output=embed"></iframe><br /></div></div>
             </div>
           </div>
 

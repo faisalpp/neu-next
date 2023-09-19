@@ -5,7 +5,7 @@ import React from 'react'
 import Marquee from "react-fast-marquee";
 
 const BrandsSlider = () => {
-   const BrandSlider = ['amana.webp', 'maytag.webp', 'frigdaire.webp', 'haier.webp', 'hisense.webp', 'kenmore.webp', 'lg.webp', 'samsung.webp', 'whirlpool.webp', 'midea.webp']
+   const BrandSlider = ['/amana.webp', '/maytag.webp', '/frigdaire.webp', '/haier.webp', '/hisense.webp', '/kenmore.webp', '/lg.webp', '/samsung.webp', '/whirlpool.webp', '/midea.webp']
    return (
       <>
          {/* Brands Logo Slider Auto Start */}
@@ -14,7 +14,7 @@ const BrandsSlider = () => {
             <div className='relative mt-2' >
                <Marquee velocity={12}>
                   {BrandSlider.map((item, index) => (
-                     <Image key={index} quality={1} alt={item} src={item} />
+                     <Image width={200} height={200} key={index} quality={1} alt={item} src={item} />
                   ))}
                </Marquee>
             </div>

@@ -7,7 +7,7 @@ const NewsLetterSection = ({ backimage }) => {
   return (
     <div id="news" className='relative'>
       <div className='flex justify-center items-center h-auto py-10 lg:py-16 maincontainer' >
-        <Image src={backimage} quality={1} className='absolute top-0 left-0 right-0 bottom-0 -z-10 w-full h-full' alt="new" />
+        <Image width={200} height={200} src={backimage} quality={1} className='absolute top-0 left-0 right-0 bottom-0 -z-10 w-full h-full' alt="new" />
         <div id="news-grid">
           <div className='col-start-2 col-end-6 flex flex-col items-center lg:space-y-5 xl:space-y-5 space-y-2 justify-center [&>*]:text-b16' >
             <Link href='/' className='bg-b3 px-7 py-2 text-xs xl:text-sm w-fit rounded-3xl !text-white font-bold' >STAY UPDATED</Link>

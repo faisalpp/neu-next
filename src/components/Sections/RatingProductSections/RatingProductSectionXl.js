@@ -4,6 +4,7 @@ import React from 'react'
 import RatingProductSliderXl from '@/components/Sections/RatingProductSections/RatingProductSliderXl'
 import { AiFillStar } from 'react-icons/ai'
 import { BsArrowRightShort } from 'react-icons/bs'
+import Link from 'next/link'
 
 const RatingProductSectionXl = ({ stars, title }) => {
   const StarIconPrinter = ({ numberOfTimes }) => {
@@ -24,7 +25,7 @@ const RatingProductSectionXl = ({ stars, title }) => {
         <div className=' relative mt-14' >
           <RatingProductSliderXl stars={stars} />
         </div>
-        <div className='flex justify-center mt-5' ><a href='' className='flex items-center border-[1px] border-b3 w-fit px-4 py-2 xl:py-2 rounded-md text-b3 font-semibold' ><span className='lg:text-sm xl:text-[16px] text-xs' >Shop All {stars} Star Cosmetic Rating Appliances</span><BsArrowRightShort className='text-2xl' /></a></div>
+        <div className='flex justify-center mt-5' ><Link href='' className='flex items-center border-[1px] border-b3 w-fit px-4 py-2 xl:py-2 rounded-md text-b3 font-semibold' ><span className='lg:text-sm xl:text-[16px] text-xs' >Shop All {stars} Star Cosmetic Rating Appliances</span><BsArrowRightShort className='text-2xl' /></Link></div>
       </div>
     </>
   )

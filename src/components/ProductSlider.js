@@ -2,8 +2,8 @@
 
 import React from 'react'
 import Slider from 'react-slick';
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import Image from 'next/image';
 
@@ -39,14 +39,14 @@ const ProductSlider = ({ image, products }) => {
       {products ? <Slider {...settings} prevArrow={<PrevButton />} nextArrow={<NextButton />} className='relative'>
         {products.map((product, index) => (
           <div key={index}>
-            <div className='flex w-full justify-center' ><Image src={product.image} className='xl:w-1/2 lg:w-44 w-40 h-full mx-auto' alt='refrigrator' /></div>
+            <div className='flex w-full justify-center' ><Image width={200} height={200} src={product.image} className='xl:w-1/2 lg:w-44 w-40 h-full mx-auto' alt='refrigrator' /></div>
           </div>
         ))}
       </Slider > :
         <Slider {...settings} prevArrow={<PrevButton />} nextArrow={<NextButton />} className='relative'>
-          <div className='flex w-full justify-center' ><Image src={image} className='xl:w-1/2 lg:w-44 w-40 h-full mx-auto' alt='refrigrator' /></div>
-          <div className='flex w-full justify-center' ><Image src={image} className='xl:w-1/2 lg:w-44 w-40 h-full mx-auto' alt='refrigrator' /></div>
-          <div className='flex w-full justify-center' ><Image src={image} className='xl:w-1/2 lg:w-44 w-40 h-full mx-auto' alt='refrigrator' /></div>
+          <div className='flex w-full justify-center' ><Image width={200} height={200} src={image} className='xl:w-1/2 lg:w-44 w-40 h-full mx-auto' alt='refrigrator' /></div>
+          <div className='flex w-full justify-center' ><Image width={200} height={200} src={image} className='xl:w-1/2 lg:w-44 w-40 h-full mx-auto' alt='refrigrator' /></div>
+          <div className='flex w-full justify-center' ><Image width={200} height={200} src={image} className='xl:w-1/2 lg:w-44 w-40 h-full mx-auto' alt='refrigrator' /></div>
         </Slider >}
     </>
   )

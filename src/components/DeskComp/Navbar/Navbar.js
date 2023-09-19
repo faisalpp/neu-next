@@ -158,7 +158,7 @@ const Navbar = () => {
         {/* Navbar Start */}
         <div className='lg:grid grid-cols-12 py-5 items-center maincontainer'>
           <Link href="/">
-            <Image className='col-start-1 col-end-3' quality={1} src="/neu.webp" alt="logo" />
+            <Image width={200} height={200} className='col-start-1 col-end-3' quality={1} src="/neu.webp" alt="logo" />
           </Link>
           {/* Search Start */}
           <div className='col-start-4 col-end-8 flex items-center bg-white h-10 px-2 rounded-lg space-x-2 w-full ' >
@@ -265,8 +265,8 @@ const Navbar = () => {
               <NavDropDown icon={<RiArrowDropDownLine className='text-2xl' />} title="Products" links={applianceTypes} bold={600} />
               <NavDropDown icon={<RiArrowDropDownLine className='text-2xl' />} title="Popular Brands" links={[{ 'name': 'Amana', 'url': '/brands/amana' }, { 'name': 'Maytag', 'url': '/brand/maytag' }, { 'name': 'Frigdaire', 'url': '/brand/frigdaire' }, { 'name': 'Haier', 'url': '/brand/haier' }, { 'name': 'Hisense', 'url': '/brand/hisense' }, { 'name': 'Kenmore', 'url': '/Kenmore' }, { 'name': 'LG', 'url': '/lg' }, { 'name': 'KitchenAid', 'url': '/kitchen-aid' }, { 'name': 'Samsung', 'url': '/samsung' }, { 'name': 'Whirlpool', 'url': '/whirlpool' }, { 'name': 'Midea', 'url': '/midea' }]} bold={600} />
               <div className='nav____item' ><Link href="/financing" >Financing</Link></div>
-              <div className='nav____item' ><span >Testimonials</span></div>
-              <div className='nav____item' ><span >Pricing</span></div>
+              <div className='nav____item' ><span>Testimonials</span></div>
+              <div className='nav____item' ><span>Pricing</span></div>
             </div>
             <div className='col-start-10 col-end-13 flex items-center justify-end space-x-10' >
               <Link href="tel:(512) 992-2714" className='flex items-center space-x-1 text-b4 cursor-pointer hover:text-white' ><FiPhone /><span className='text-xs font-medium w-max' >(512) 992-2714</span></Link>

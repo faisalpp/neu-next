@@ -27,7 +27,7 @@ const PproductCard = ({ type, stars, discount }) => {
         {type == 3 ? <h4 className='text-b9 font-semibold text-[8.27px] mt-3' >very Minor To No Cosmetic Damage</h4> : null}
         <div className='flex items-center mt-2 space-x-1 bg-b10 rounded-xl px-2 py-[3px] text-white' ><AiOutlineCheckCircle className='text-xs' /><span className='text-[8.27px]' >100% Functional</span></div>
         <div className='flex justify-center pt-5 w-full' >
-          <Image quality={1} src="p1.webp" alt='p1' className='w-20' />
+          <Image width={200} height={200} quality={1} src="/p1.webp" alt='p1' className='w-20' />
         </div>
 
         <div className='flex flex-col space-y-3' >

@@ -86,12 +86,12 @@ const ReviewSlider = ({ color, clientreviews, icon }) => {
                             <a href='' className="text-sm text-b6 mt-2">Read More</a>
                             <div className="flex items-center">
                                 <h5 className="text-sm mt-2 w-10/12">{clientreview.author_name ? clientreview.author_name : clientreview.user.name}</h5>
-                                <Image quality={1} src={icon} className="h-5 w-10 object-contain mt-4" alt="Icon" />
+                                <Image width={200} height={200} quality={1} src={icon} className="h-5 w-10 object-contain mt-4" alt="Icon" />
                             </div>
                         </div>
                     </div>
                 ))}
-            </Slider> : <div className='flex items-center justify-center w-full' ><Image quality={1} src="/loader-bg.gif" alt='loader-bg' className="w-10 h-10 " /></div>}
+            </Slider> : <div className='flex items-center justify-center w-full' ><Image width={200} height={200} quality={1} src="/loader-bg.gif" alt='loader-bg' className="w-10 h-10 " /></div>}
         </div >
     );
 };

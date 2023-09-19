@@ -1,12 +1,13 @@
 import React from 'react'
-import { Modal } from './Reusable/Modal'
+import { Modal } from '@/components/Reusable/Modal'
+import Image from 'next/image'
 
 const Wwsl = ({ img, title, txtStyle, description, note }) => {
   return (
     <>
       <div className='pl-3 p-2 xs:p-2 xl:!p-5'>
         <div className='relative h-full maxxs:!min-h-[207px] maxcosm:min-h-[217px] xs:min-h-[190px] sm:min-h-[207px] md-to-lg:min-h-[223px] lg:min-h-full lg-to-xl:!min-h-[251px] xl:!min-h-[223px] 2xl:!min-h-[240px] flex flex-col m-0 items-center rounded-xl p-5 2xl:p-7 3xl:p-10 bg-white shadow-lg' >
-          <img src={img} className='w-16 mb-4 md:mb-8' alt={`${img}`} />
+          <Image width={200} height={200} quality={1} src={img} className='w-16 mb-4 md:mb-8' alt={`${img}`} />
           <h3 className={`text-lg coxs:text-2xl xs:text-base sm:!text-lg lg:!text-lg 2xl:!text-xl 3xl:!text-2xl ${txtStyle} mb-8 font-semibold text-center`} >{title}</h3>
           <div className='absolute bottom-5 2xl:bottom-7 3xl:bottom-10 flex justify-center items-center'>
             <Modal icon={img} title={title} description={description} note={note} buttonClass="text-b7 maxsm:text-sm font-semibold flex justify-center items-center gap-1" buttonName={`Learn More <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">

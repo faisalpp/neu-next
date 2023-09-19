@@ -34,13 +34,13 @@ const ApplianceSection = () => {
         <Link href='/applianceTypes' >
           <div className='maxmd:max-w-[330px] maxmd:mx-auto'>
             <div className='flex flex-col items-center justify-center rounded-xl border-[1px] border-gray-200 bg-white p-10' >
-              <Image src='/all.webp' alt='all' quality={1} className='h-56' />
+              <Image width={200} height={200} src='/all.webp' alt='all' quality={1} className='h-56 w-full' />
             </div>
             <h4 className=' font-bold xl:text-xl text-lg mt-2' >All Appliances</h4>
           </div>
         </Link>
       </div>
-      <div className='flex justify-center mt-16' ><Link to='/applianceTypes' className='flex items-center border-[1px] border-b3 w-fit px-4 py-3 rounded-md text-b3 font-semibold' ><span className='xl:text-[16px] lg:text-sm' >View All Categories</span><BsArrowRightShort className='text-2xl' /></Link></div>
+      <div className='flex justify-center mt-16' ><Link href='/applianceTypes' className='flex items-center border-[1px] border-b3 w-fit px-4 py-3 rounded-md text-b3 font-semibold' ><span className='xl:text-[16px] lg:text-sm' >View All Categories</span><BsArrowRightShort className='text-2xl' /></Link></div>
     </div>
   )
 }

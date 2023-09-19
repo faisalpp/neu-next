@@ -29,7 +29,7 @@ const GallerySlider = ({ page, setPage, totalPages, media, setImg, img }) => {
         <button onClick={btnprev} className='absolute top-0 -right-5 z-40 h-full'><div className='hidden lg:flex bg-black/30 hover:bg-cyan-500 cursor-pointer px-2 py-2 rounded-full text-white group'><BsArrowRightShort className='text-xl' /></div></button>
         <button onClick={btnnext} className='absolute top-0 -left-5 z-40 h-full'><div className='hidden lg:flex bg-black/30 hover:bg-cyan-500 cursor-pointer px-2 py-2 rounded-full text-white group'><BsArrowLeftShort className='text-xl' /></div></button>
         <div id="id6" className='flex lg:overflow-x-hidden overflow-x-scroll xl:space-x-[9px] space-x-4 lg:space-x-3 scroll-smooth' >
-          {media.length > 0 ? media.map((item, index) => <Image alt={item.url} quality={1} key={index} onClick={() => setImg(item.url)} src={item.url} className={`xl:h-[142px] xl:w-[171px] cursor-pointer lg:h-[100px] lg:w-[130px] w-36 h-32 rounded-2xl ${img === item.imageUrl ? 'border-2 border-white rounded-xl' : 'border-none'}  `} />) : null}
+          {media.length > 0 ? media.map((item, index) => <Image width={200} height={200} alt={item.url} quality={1} key={index} onClick={() => setImg(item.url)} src={item.url} className={`xl:h-[142px] xl:w-[171px] cursor-pointer lg:h-[100px] lg:w-[130px] w-36 h-32 rounded-2xl ${img === item.imageUrl ? 'border-2 border-white rounded-xl' : 'border-none'}  `} />) : null}
         </div>
       </div>
 

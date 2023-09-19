@@ -52,7 +52,7 @@ const LoopSection = () => {
         <div>
           <StayLoopSlider page={page} setPage={setPage} totalPages={totalPages} loopVideo={loopVideo} setLoopVideo={setLoopVideo} setVideo={setVideo} video={video} />
         </div>
-        <div className='flex justify-center mt-10 lg:mt-16' ><Link to='/stay-in-loop' className='flex items-center border-[1px] border-b3 w-fit px-4 py-2 rounded-md text-b3 font-semibold' ><span className='text-sm' >View All Videos</span><BsArrowRightShort className='text-2xl' /></Link></div>
+        <div className='flex justify-center mt-10 lg:mt-16' ><Link href='/stay-in-loop' className='flex items-center border-[1px] border-b3 w-fit px-4 py-2 rounded-md text-b3 font-semibold' ><span className='text-sm' >View All Videos</span><BsArrowRightShort className='text-2xl' /></Link></div>
       </div>
 
     </div>

@@ -10,11 +10,11 @@ import ReviewSection from '@/components/ReviewSection';
 import LoopSection from '@/components/LoopSection';
 import ApplianceSection from '@/components/ApplianceSection';
 import MapSection from '@/components/MapSection';
+import RatingProductSection from '@/components/RatingProductSection';
 import TourSection from '@/components/TourSection';
 import GallerySection from '@/components/GallerySection';
 import SatisfiedSection from '@/components/SatisfiedSection';
 import NewsLetterSection from '@/components/NewsLetterSection';
-import RatingProductSection from '@/components/RatingProductSection';
 
 export default function Home() {
   return (
@@ -51,7 +51,7 @@ export default function Home() {
 
       <SatisfiedSection apiSectionName="home-page-footer-review" title="Join Thousands of our Satisfied Customers." />
 
-      <NewsLetterSection backimage="new.webp" />
+      <NewsLetterSection backimage="/new.webp" />
     </>
   )
 }

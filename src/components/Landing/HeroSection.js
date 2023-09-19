@@ -14,7 +14,7 @@ const HeroSection = () => {
                 {/* Navigation */}
                 <nav className='max-w-1680px px-4 sm:px-10 lg:px-16 xl:px-20 2xl:px-120px mx-auto py-5 flex justify-between items-center'>
                     <Link to="/">
-                        <img src="/neu.webp" alt="neuappliances" className='h-10' />
+                        {/* <img src="/neu.webp" alt="neuappliances" className='h-10' /> */}
                     </Link>
                     <div className='flex gap-6 items-center'>
                         <button type='button' className='md:hidden text-white inline-flex items-center justify-center font-medium text-xs px-4 py-3 bg-[rgba(255,255,255,0.08)] rounded-lg relative'>

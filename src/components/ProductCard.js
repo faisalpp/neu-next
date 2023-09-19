@@ -42,8 +42,8 @@ const ProductCard = ({ title, dicount, type, stars, discount, codmetics, customS
     <div className={customStyle}>
       <div className='flex flex-col maxmd:max-w-[330px] relative maxmd:mx-auto bg-white w-full h-auto rounded-md p-4 sm:p-6 md:p-8 lg:p-6 shadow-md' >
         {type === 1 ? <div className='absolute top-0 left-2 flex items-center bg-b9 w-fit px-3 rounded-b-2xl ml-2 justify-center h-6 gap-x-2 text-white' ><AiOutlineDollar /><span className='text-xs' >Best Value</span></div> : null}
-        {type === 2 ? <div className='absolute top-0 left-2  flex items-center bg-b3 w-fit px-3 rounded-b-2xl ml-2 justify-center h-7 gap-x-2 text-white' ><Image src="/svgs/local_fire_department.webp" alt="" /> <span className='text-xs' >Most Popular</span></div> : null}
-        {type === 3 ? <div className='absolute top-0 left-2  flex items-center bg-b7 w-fit rounded-b-2xl ml-2 justify-center px-3 h-7 gap-x-2 text-white' ><Image src="/svgs/star_rate_half.webp" alt="star_rate_half" /> <span className='text-xs' >Premium Condition</span></div> : null}
+        {type === 2 ? <div className='absolute top-0 left-2  flex items-center bg-b3 w-fit px-3 rounded-b-2xl ml-2 justify-center h-7 gap-x-2 text-white' ><Image width={16} height={16} src="/svgs/local_fire_department.webp" alt="local_fire_department" /> <span className='text-xs' >Most Popular</span></div> : null}
+        {type === 3 ? <div className='absolute top-0 left-2  flex items-center bg-b7 w-fit rounded-b-2xl ml-2 justify-center px-3 h-7 gap-x-2 text-white' ><Image width={16} height={16} src="/svgs/star_rate_half.webp" alt="star_rate_half" /> <span className='text-xs' >Premium Condition</span></div> : null}
         <div className='flex flex-col items-center justify-center mt-4 w-full' >
           <div className='flex justify-center items-center text-center gap-x-1 text-sm sm:text-base xl:text-[0.98rem]' ><h4 className='font-bold' >{title}:</h4><span className='font-semibold' >{stars} Stars</span></div>
           <div className='flex gap-x-3 mt-2' ><StarIconPrinter numberOfTimes={stars} /></div>
@@ -79,10 +79,10 @@ const ProductCard = ({ title, dicount, type, stars, discount, codmetics, customS
                 <div className='flex gap-x-1 items-center' ><span>Open Box / Scratch & Dent</span></div>
                 <div className='flex gap-x-1 items-center' ><AiOutlineCheckCircle className='text-b6' /><h4>100%</h4></div>
                 <div className='flex gap-x-1 items-center' ><AiOutlineCheckCircle className='text-b6' /><h4>Passed</h4></div>
-                <div className='flex gap-x-1 items-center' ><Image src="/nueshield.webp" className='w-4 h-4' alt="nueshield" /><span>1 Year Warranty</span></div>
+                <div className='flex gap-x-1 items-center' ><Image width={200} height={200} src="/nueshield.webp" className='w-4 h-4' alt="nueshield" /><span>1 Year Warranty</span></div>
               </div>
             </div>
-            <Link to="" className='flex items-center justify-center gap-x-2 text-white text-base bg-b7 h-10 rounded-md hover:underline' ><span>Shop {stars} Star Products</span><IoIosArrowForward className='text-xl' /></Link>
+            <Link href="" className='flex items-center justify-center gap-x-2 text-white text-base bg-b7 h-10 rounded-md hover:underline' ><span>Shop {stars} Star Products</span><IoIosArrowForward className='text-xl' /></Link>
           </div>
         </div>
       </div>

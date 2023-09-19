@@ -228,9 +228,9 @@ const SideCart = () => {
         <button onClick={() => { sCart ? dispatch(hideSCart()) : dispatch(showSCart()) }} className='maxlg:w-10 maxlg:h-10 bg-white maxlg:hover:bg-b3 maxlg:hover:text-white duration-200 maxlg:rounded-full absolute -top-14 right-0 lg:top-5 lg:right-6 z-40  xy-center'><AiOutlineClose className='text-xl' /></button>
         <div className='flex flex-col overflow-y-auto w-full h-full'>
           <div className='flex items-center sticky top-0 bg-white maxlg:rounded-t-2xl py-5 px-6 justify-between' ><div className='flex items-center gap-x-3' ><h4>My Cart</h4>{pickupOrders.length === 0 && deliveryOrders.length === 0 ? null : <span className='bg-b3 text-white rounded-full text-xs w-5 h-5 xy-center' >{cartCount}</span>}</div></div>
-          {loading ? <div className='xy-center h-full w-full' ><Image src="/loader-bg.gif" quality={1} alt='loader' className='w-10 h-10 ml-2' /></div> : pickupOrders.length === 0 && deliveryOrders.length === 0 ?
+          {loading ? <div className='xy-center h-full w-full' ><Image width={200} height={200} src="/loader-bg.gif" quality={1} alt='loader' className='w-10 h-10 ml-2' /></div> : pickupOrders.length === 0 && deliveryOrders.length === 0 ?
             <div className='flex flex-col px-2 space-y-5 w-full justify-center items-center h-full' >
-              <Image src="/bag.webp" quality={1} alt='bag' />
+              {/* <Image width={200} height={200} src="/bag.webp" quality={1} alt='bag' /> */}
               <h1 className='font-extrabold' >Your Cart is Empty</h1>
               <h2 className='text-center' >Lorem Ipsum Doller Sit Amet, Consecture Audipicsing Elit</h2>
               <button type='button' className='xy-center rounded-lg bg-b3 py-3 text-white font-medium w-1/2 text-sm'><BsCart3 className='mr-2' /> Start Shopping</button>
@@ -258,7 +258,7 @@ const SideCart = () => {
                       <button onClick={toggleDropdown} className='w-full rounded-lg flex justify-between items-center'>
                         <div className='flex gap-2 items-center'>
                           <span className='w-[18px] h-[18px]'>
-                            <Image src="/svgs/calendar_month.webp" alt="calendar_month" />
+                            <Image width={200} height={200} src="/svgs/calendar_month.webp" alt="calendar_month" />
                           </span>
                           <span className='text-xs font-medium text-b3'>
                             Select Time-slot
@@ -318,7 +318,7 @@ const SideCart = () => {
                 <button type='button' onClick={UpdateCart} className='text-xs text-white rounded-lg bg-b3 px-4 py-3 flex gap-2 justify-center'>
                   Proceed to Checkout
                   <AiOutlineArrowRight className='text-base' />
-                  {chkLoader ? <Image src="/loader-bg.gif" alt='loader-bg' className='w-4 h-4' /> : null}
+                  {chkLoader ? <Image width={200} height={200} src="/loader-bg.gif" alt='loader-bg' className='w-4 h-4' /> : null}
                 </button>
               </div></>}
         </div>

@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Slider from 'react-slick'
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import ReviewExCard from '@/components/ReviewExCard';
 import Image from 'next/image';
@@ -58,7 +58,7 @@ const ReviewEXSlider = ({ clientreviews, icon, dots }) => {
             <ReviewExCard description={clientreview.content} author={clientreview.author} review={clientreview.rating} />
           </div>
         ))}
-      </Slider> : <div className='flex items-center justify-center w-full' ><Image alt='loader-bg' src="/loader-bg.gif" className="w-10 h-10 " /></div>}
+      </Slider> : <div className='flex items-center justify-center w-full' ><Image width={200} height={200} alt='loader-bg' src="/loader-bg.gif" className="w-10 h-10 " /></div>}
     </div >
   );
 };

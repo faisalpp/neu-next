@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import GallerySlider from '@/components/GallerySlider'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { getGalleryImages } from '@/api/frontEnd'
+import Link from 'next/link'
 
 const GallerySection = () => {
   const [media, setMedia] = useState([]);
@@ -43,7 +44,7 @@ const GallerySection = () => {
             <GallerySlider page={page} setPage={setPage} totalPages={totalPages} media={media} setImg={setImg} img={img} />
           </div>
         </div>
-        <div className='flex justify-center py-5' ><a href='' className='flex items-center border-[1px] border-white w-fit px-4 xl:py-2 py-1 rounded-md font-semibold text-white' ><span className='text-sm xl:text-[16px]' >Shop Now</span><BsArrowRightShort className='text-2xl xl:text-3xl' /></a></div>
+        <div className='flex justify-center py-5' ><Link href='' className='flex items-center border-[1px] border-white w-fit px-4 xl:py-2 py-1 rounded-md font-semibold text-white' ><span className='text-sm xl:text-[16px]' >Shop Now</span><BsArrowRightShort className='text-2xl xl:text-3xl' /></Link></div>
       </div>
     </div>
   )

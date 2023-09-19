@@ -3,8 +3,8 @@
 import React from 'react'
 import Wwsl from '@/components/Wwsl'
 import Slider from 'react-slick';
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const WwslSection = () => {
   const settings = {
@@ -68,9 +68,9 @@ const WwslSection = () => {
   )
 }
 const wwslList = [
-  { icon: 'wwsl1.webp', title: 'Scratch and Dent Appliances', description: 'Our Deep discounts on Scratch and Dent Appliances may include cosmetic imperfections like: scratches, dents, dings, scuffs or other marks that occurred during shipping, handling, or even during the manufacturing process.  We grade these appliances and apply huge savings!', note: 'The bigger the dent, the bigger the discount!' },
-  { icon: 'wwsl2.webp', title: 'Floor Model & Display Appliances', description: "Floor Model and Display Model Appliances have been displayed in a showroom or retail store to show it's features and functions. Floor and Display Model appliances may have scratches or dents that occurred from this. Our deep discounts make these a great deal for the buyer!", note: 'The bigger the dent, the bigger the discount!' },
-  { icon: 'wwsl3.webp', title: 'Open Box Appliances', description: "Open Box Appliances have had their packaging opened for any reason but typically include appliances that were purchased and returned by a customer. If the Open Box Appliance has any cosmetic scratches or dents we provide huge discounts!", note: 'The bigger the dent, the bigger the discount!' },
-  { icon: 'wwsl4.webp', title: 'Overstock Appliances', description: "Overstock Appliances are brand new appliances that were purchased by a retailer or distributor in excess. Neu Appliance Outlet liquidates Overstock Appliances at huge discounts compared to their original price. We test, inspect and grade each appliance. Our huge discounts of Overstock A  ppliances keep our customers raving about our business!", note: 'The bigger the dent, the bigger the discount!' },
+  { icon: '/wwsl1.webp', title: 'Scratch and Dent Appliances', description: 'Our Deep discounts on Scratch and Dent Appliances may include cosmetic imperfections like: scratches, dents, dings, scuffs or other marks that occurred during shipping, handling, or even during the manufacturing process.  We grade these appliances and apply huge savings!', note: 'The bigger the dent, the bigger the discount!' },
+  { icon: '/wwsl2.webp', title: 'Floor Model & Display Appliances', description: "Floor Model and Display Model Appliances have been displayed in a showroom or retail store to show it's features and functions. Floor and Display Model appliances may have scratches or dents that occurred from this. Our deep discounts make these a great deal for the buyer!", note: 'The bigger the dent, the bigger the discount!' },
+  { icon: '/wwsl3.webp', title: 'Open Box Appliances', description: "Open Box Appliances have had their packaging opened for any reason but typically include appliances that were purchased and returned by a customer. If the Open Box Appliance has any cosmetic scratches or dents we provide huge discounts!", note: 'The bigger the dent, the bigger the discount!' },
+  { icon: '/wwsl4.webp', title: 'Overstock Appliances', description: "Overstock Appliances are brand new appliances that were purchased by a retailer or distributor in excess. Neu Appliance Outlet liquidates Overstock Appliances at huge discounts compared to their original price. We test, inspect and grade each appliance. Our huge discounts of Overstock A  ppliances keep our customers raving about our business!", note: 'The bigger the dent, the bigger the discount!' },
 ]
 export default WwslSection

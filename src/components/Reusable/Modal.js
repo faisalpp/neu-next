@@ -4,6 +4,7 @@ import React from "react";
 import { Dialog, DialogBody } from "@material-tailwind/react";
 import { IoCloseOutline } from "react-icons/io5";
 import { AiFillStar } from 'react-icons/ai'
+import Image from "next/image";
 
 export function Modal({ buttonName, buttonClass, icon, title, description, note, rating }) {
     const [open, setOpen] = React.useState(false);
@@ -31,7 +32,7 @@ export function Modal({ buttonName, buttonClass, icon, title, description, note,
             <Dialog className="relative sm:!max-w-[420px] sm:!min-w-[420px]" open={open} handler={handleOpen}>
                 <DialogBody className="p-6">
                     {icon ?
-                        <img src={icon} className="w-14 h-14 mb-4 mx-auto" alt={title} />
+                        <Image width={56} height={56} src={icon} className="w-14 h-14 mb-4 mx-auto" alt={title} />
                         : ''}
                     <h3 className="text-black text-2xl mb-4 font-semibold text-center">{title}</h3>
                     {rating ? <div className='flex justify-center items-center gap-1 mb-2' >
