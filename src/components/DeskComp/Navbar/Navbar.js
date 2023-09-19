@@ -157,7 +157,7 @@ const Navbar = () => {
         {/* Navbar Start */}
         <div className='lg:grid grid-cols-12 py-5 items-center maincontainer'>
           <Link href="/">
-            <Image className='col-start-1 col-end-3' quality={1} src="/neu.webp" width={10} height={10} alt="logo" />
+            <Image className='col-start-1 col-end-3' quality={1} src="/neu.webp" width={200} height={200} alt="logo" />
           </Link>
           {/* Search Start */}
           <div className='col-start-4 col-end-8 flex items-center bg-white h-10 px-2 rounded-lg space-x-2 w-full ' >

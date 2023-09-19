@@ -6,31 +6,26 @@ import MobNavbar from '@/components/MobComp/Navbar'
 import SideCart from '@/components/SideCart'
 
 const Navbar = () => {
-  const [isDesktop, setIsDesktop] = useState();
-  // Mobile and Desktop Design
+  const [isDesktop, setIsDesktop] = useState(false);
+
   useEffect(() => {
-    const handleResize = () => {
+    setIsDesktop(window.innerWidth >= 992);
+
+    window.addEventListener('resize', () => {
       setIsDesktop(window.innerWidth >= 992);
+    });
+
+    return () => {
+      window.removeEventListener('resize', () => { });
     };
+  }, []);
 
-    useEffect(() => {
-      setIsDesktop(window.innerWidth >= 992);
-
-      window.addEventListener('resize', () => {
-        setIsDesktop(window.innerWidth >= 992);
-      });
-
-      return () => {
-        window.removeEventListener('resize', () => { });
-      };
-    }, []);
-
-    return (
-      <>
-        {isDesktop ? <DeskNavbar /> : <MobNavbar />}
-        <SideCart />
-      </>
-    )
-  }
+  return (
+    <>
+      {isDesktop ? <DeskNavbar /> : <MobNavbar />}
+      <SideCart />
+    </>
+  )
+}
 
 export default Navbar
